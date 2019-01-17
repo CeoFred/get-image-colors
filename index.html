@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <div id="dominant-color" style="width:300px;height:300px;padding:20px;">
+
+        <img width="100%" height="100%" src="./1.jpg" id="imageSrc">
+    </div>
+<br/>
+<br/>
+
+    <div id="palletes">
+
+    </div>
+   <script type="text/javascript"  src="./color-thief.js"> </script> 
+   <script>
+  
+    let colorthief = new ColorThief();
+    
+    let sample_image = '';
+    
+    sample_image = document.getElementById('imageSrc');
+    palletes = document.getElementById('palletes');
+    
+    let dominantColor = colorthief.getColor(sample_image,8);
+    
+    document.getElementById('dominant-color').style.backgroundColor =
+     `rgb(${dominantColor[0]},${dominantColor[1]},${dominantColor[2]})`;
+     
+    let palette = colorthief.getPalette(sample_image, 8,5);
+    
+    palette.forEach((element,index) => {
+      let palle =   `<span style="padding:30px;background:rgba(${element[0]},${element[1]},${element[2]})">${index}</span>`
+        palletes.innerHTML += palle;
+    });
+   </script>
+</body>
+</html>
