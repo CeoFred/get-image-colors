@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  text-align: center;
+}
+form,
+div#wrap {
+  margin: 10px auto;
+  text-align: left;
+  position: relative;
+  width: 500px;
+}
+fieldset {
+  padding: 20px;
+  border: solid #999 2px;
+}
+img {
+  width: 200px;
+}
+table {
+  border: solid #000 1px;
+  border-collapse: collapse;
+}
+td {
+  border: solid #000 1px;
+  padding: 2px 5px;
+  white-space: nowrap;
+}
+br {
+  width: 100%;
+  height: 1px;
+  clear: both;
+}
